@@ -8,7 +8,7 @@
     <body>
         <div id="site">
             <div id="topBar">
-              
+
               <svg  xmlns="http://www.w3.org/2000/svg"  width="44"  height="44"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round" class="top-bar-icon ui-btn-icon icon icon-tabler icons-tabler-outline icon-tabler-folder-open" id="btnOpenFile"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19l2.757 -7.351a1 1 0 0 1 .936 -.649h12.307a1 1 0 0 1 .986 1.164l-.996 5.211a2 2 0 0 1 -1.964 1.625h-14.026a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v2" /></svg>
 
               <svg  xmlns="http://www.w3.org/2000/svg"  width="44"  height="44"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round" class="disabled top-bar-icon ui-btn-icon icon icon-tabler icons-tabler-outline icon-tabler-device-floppy"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" /><path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M14 4l0 4l-6 0l0 -4" /></svg>
@@ -29,9 +29,9 @@
             <section class="mainSection">
                 
                 <div id="leftBar">
-                  <!--<svg  xmlns="http://www.w3.org/2000/svg"  width="44"  height="44"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="disabled left-bar-icon ui-btn-icon icon icon-tabler icons-tabler-outline icon-tabler-crop" id="crop"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 5v10a1 1 0 0 0 1 1h10" /><path d="M5 8h10a1 1 0 0 1 1 1v10" /></svg>
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="44"  height="44"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="disabled left-bar-icon ui-btn-icon icon icon-tabler icons-tabler-outline icon-tabler-crop" id="crop"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 5v10a1 1 0 0 0 1 1h10" /><path d="M5 8h10a1 1 0 0 1 1 1v10" /></svg>
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="44"  height="4"  viewBox="0 0 44 4"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-minus"><path stroke="none" d="M0 0h24v44H0z" fill="none"/><path d="M5 2l34 0" /></svg>
-                -->
+                
                 </div>
                 <div id="imageArea">
                     <div id="filters">
@@ -100,8 +100,8 @@
                         </div>
                     </div>
                     <div>
-                        <div id="crop-overlay" class="inner-overlay">
-                        </div>
+                        <!--<canvas id="crop-overlay" class="inner-overlay">
+                        </canvas>-->
                         <canvas id="canvasArea">
                         </canvas>
                     </div>
@@ -113,8 +113,9 @@
         <input type="file" accept="image/*" id="fileUp">
         <img id="imgOriginal">
     </body>
+    <script src="main.js" ></script>
+    <script src="image-loader.js" ></script>
     <script src="crop.js" ></script>
     <script src="ui.js" ></script>
-    <script src="main.js" ></script>
     <script src="fx.js" ></script>
 </html>
