@@ -3,7 +3,6 @@
     border: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1b1c29
 }
 
 body{
@@ -16,7 +15,6 @@ body{
     display: flex;
     flex-direction: column;
     margin: auto;
-    background-color: #7d83b9;
 }
 
 #topBar{
@@ -25,21 +23,18 @@ body{
     align-items: center;
     justify-content: center;
     column-gap: .25%;
-    background-color: #1b1c29;
+    background-color: rgb(66, 71, 78);
 	border-style: solid;
 	border-width: 0 0 .05em 0;
-	border-color: none;
+	border-color: rgb(93, 100, 109);
     height: 6%;
-    border-bottom: none;
 }
 
 #topBar > svg {
     position: relative;
-    margin: 1.25% 5px 1.25% 5px;
+    margin: .25% 0 .25% 0;
 	height: 2.5em;
     width: auto;
-    color: rgb(213, 162, 255);
-    background-color: purple;
 }
 
 #leftBar{
@@ -57,10 +52,9 @@ body{
 
 #leftBar > svg, #rightBar > svg{
     position: relative;
-    height: auto;
+    height: 2.5em;
 	width: 2.5em;
-    background-color: purple;
-    margin: 2.25% 10px 2.25% 10px;
+    
 }
 
 .ui-btn-icon{
@@ -82,7 +76,6 @@ body{
 
 .disabled {
     pointer-events: none;
-    opacity: 0.2;
 }
 
 .inner-overlay{
@@ -100,11 +93,10 @@ body{
 
 #leftBar{
     width: 3%;
-    background-color: #1b1c29;
-	/* border-style: solid; */
-	/* border-width: 0 1px 0 0; */
-	/* border-color: none; */
-    color: rgb(213, 162, 255);
+    background-color: rgb(66, 71, 78);
+	border-style: solid;
+	border-width: 0 1px 0 0;
+	border-color: rgb(93, 100, 109);
 }
 
 /*#crop-overlay{
@@ -114,7 +106,7 @@ body{
 #imageArea{
     position: relative;
     width: 94%;
-    background-color: rgb(75, 12, 87);
+    background-color: rgb(66, 71, 78);
 }
 
 #imageArea > div{
@@ -122,8 +114,8 @@ body{
 	height: 99%;
 	margin: .5%;
 	background-color: rgb(53, 57, 62);
-	/* border: solid 1px rgb(66, 71, 78); */
-	/* border-radius: 10px; */
+	border: solid 1px rgb(66, 71, 78);
+	/*border-radius: 10px;*/
 }
 
 #canvasArea{
@@ -134,10 +126,10 @@ body{
 
 #rightBar{
     width: 3%;
-    background-color: #1b1c29;
+    background-color: rgb(66, 71, 78);
 	border-style: solid;
-	/* border-width: 0 0 0 1    px; */
-	border-color: none;
+	border-width: 0 0 0 1px;
+	border-color: rgb(93, 100, 109);
 }
 
 .mainSection{
@@ -148,5 +140,4 @@ body{
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
-    background-color: none;
 }
