@@ -1,13 +1,13 @@
 const sliders = Array.from(document.getElementsByClassName("fxslidebar"));
 const inputs = Array.from(document.getElementsByClassName("fxinput"));
-const fxResetBtns = Array.from(document.getElementsByClassName("rstfilter"))
+const filtersResetBtns = Array.from(document.getElementsByClassName("rstfilter"))
 const defaultFilters = [0, 100, 100, 0, 0, 0, 100, 100, 0];
-const fxBtn = document.getElementById("fxbtn");
-const fxBox = document.querySelector("#filters");
+const filtersBtn = document.getElementById("filtersbtn");
+const filtersBox = document.querySelector("#filters");
 
 sliders.forEach(setFxEvent); // Set events for sliders inputs value changes
 inputs.forEach(setFxEvent); // Set events for fx inputs value changes
-fxResetBtns.forEach(setResetFxEvent); // Set effect reset buttons events
+filtersResetBtns.forEach(setResetFxEvent); // Set effect reset buttons events
 
 function setFxEvent(value, index, array){
     resetAllFilters();
@@ -28,11 +28,11 @@ function setResetFxEvent(value, index, array){
     });
 }
 
-fxBtn.addEventListener('click', () => {
-    if(fxBox.style.display == "none"){
-        setDisplay(fxBox, "flex");
+filtersBtn.addEventListener('click', () => {
+    if(filtersBox.style.display == "none"){
+        setDisplay(filtersBox, "flex");
     }else{
-        setDisplay(fxBox, "none");
+        setDisplay(filtersBox, "none");
     }
 });
 
