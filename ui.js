@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
     document.querySelector("#filters").style.display = "none";
+    document.querySelector("#overlay-canvas").style.display = "none";
     document.querySelector("#effects").style.display = "none";
 
 });
