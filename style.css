@@ -107,10 +107,6 @@ body{
     color: rgb(213, 162, 255);
 }
 
-/*#crop-overlay{
-    z-index: 999;
-}*/
-
 #imageArea{
     position: relative;
     width: 94%;
@@ -126,10 +122,33 @@ body{
 	/* border-radius: 10px; */
 }
 
-#canvasArea{
+/*
+#konvaDiv div {
+    width: 100%;
+}*/
+
+/*
+#konvaDiv * {
+    position: absolute;
+}
+
+#konvaDiv > canvas{
     width: 100%;
     height: 100%;
+}*/
+
+.canvas-container, #canvasArea, .upper-canvas{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#canvasArea{
+    position: relative;
 	margin: auto;
+}
+
+.upper-canvas{
+    opacity: 0 !important;
 }
 
 #rightBar{

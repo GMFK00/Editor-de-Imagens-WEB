@@ -10,6 +10,13 @@ effectsBtn.addEventListener('click', () => {
     }
 });
 
+var app = new PIXI.Application({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    backgroundColor: 0x2c3e50,
+    view: myCanvas
+});
+
 effectElements.forEach((element, index) => {
     element.addEventListener("click", () => {
         applyEffect(index);
