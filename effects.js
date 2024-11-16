@@ -16,7 +16,30 @@ effectElements.forEach((element, index) => {
     });
 });
 
+// Inicializa o canvas WebGL do glfx.js
+let glfxCanvas;
+let originalTexture; // Para armazenar a textura original
+
+try {
+    glfxCanvas = fx.canvas();
+} catch (e) {
+    alert("Seu navegador não suporta WebGL.");
+    throw e;
+}
+
+// Função para carregar a textura original
+function loadOriginalTexture() {
+    const image = document.getElementById("canvasArea");
+    originalTexture = glfxCanvas.texture(image); // Carrega a imagem inicial como textura
+}
+
+// Função principal para aplicar efeitos
 function applyEffect(index) {
+    if (!originalTexture) {
+        loadOriginalTexture(); // Garante que a textura original foi carregada
+    }
+    
+    // Remove o efeito escolhido usando o Caman.js
     Caman(canvas, function() {
         this.reset();
     });
@@ -47,6 +70,7 @@ function applyEffect(index) {
     }
 }
 
+// Efeitos da Caman.js
 function applyVintage() {
     Caman(canvas, function () {
         this.vintage().render();
@@ -146,46 +170,42 @@ function applyNostalgia() {
     });
 }
 
+// Efeitos do glfx.js
 function applyOilPainting() {
-    Caman(canvas, function () {
-        this.blur(5).render();
-    });
+    glfxCanvas.draw(originalTexture).ink(0.25).update();
+    replaceCanvasWithGLFX();
 }
 
 function applyVignette() {
-    Caman(canvas, function () {
-        this.vignette({
-            x: 0.5,
-            y: 0.5,
-            radius: 0.5,
-            strength: 0.5
-        }).render();
-    });
+    glfxCanvas.draw(originalTexture).vignette(0.5, 0.8).update();
+    replaceCanvasWithGLFX();
 }
 
-
 function applyPencilDrawing() {
-    Caman(canvas, function () {
-        this.sketch(10).render();
-    });
+    glfxCanvas.draw(originalTexture).edgeWork(3).update();
+    replaceCanvasWithGLFX();
 }
 
 function applyPixelate() {
-    Caman(canvas, function () {
-        this.pixelate(10).render();
-    });
+    glfxCanvas.draw(originalTexture).hexagonalPixelate(320, 239.5, 10).update();
+    replaceCanvasWithGLFX();
 }
 
 function applyEngraving() {
-    Caman('#imageElement', function () {
-        this.contrast(100)
-            .invert()
-            .render();
-    });
+    glfxCanvas.draw(originalTexture).dotScreen(320, 239.5, 1.1, 3).update();
+    replaceCanvasWithGLFX();
 }
 
+// Substitui a imagem/canvas original pelo canvas do glfx.js
+function replaceCanvasWithGLFX() {
+    const image = document.getElementById("canvasArea");
+    image.parentNode.insertBefore(glfxCanvas, image);
+    image.parentNode.removeChild(image);
+}
+
+// Efeito da Caman.js
 function applyGranulado() {
     Caman(canvas, function () {
-        this.noise(10).render();
+        this.noise(30).render();
     });
 }
