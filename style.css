@@ -79,11 +79,11 @@ body{
 	border: solid 1px rgb(107, 91, 149);
 	border-radius: 50%;
 }
-
-.disabled {
+/* sfsdfasfasdfasfasdfasdfasfasfasdfasdfasdfasfasdfasdfasdfasdfasdasdfgasdfasdfgfasdfasdfasdfasd */
+/* .disabled {
     pointer-events: none;
     opacity: 0.2;
-}
+} */
 
 .inner-overlay{
     display: none;

@@ -11,6 +11,8 @@
     border-radius: 1rem;
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
     z-index: 1000;
+    background-color: #420659;
+    color: white;
 }
 
 #effects::before {
@@ -27,6 +29,8 @@
 }
 
 .effectElement {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,11 +38,12 @@
     margin-bottom: 0.5em;
     padding: 0.5em;
     cursor: pointer;
-    background-color: #f0f0f0;
+    background-color: #370d37;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .effectElement:hover {
-    background-color: #d0d0d0;
+    background-color: #1e071e;
+    color: #ffe4ff;
 }
