@@ -61,12 +61,12 @@ function applyEffect(index) {
         case 13: applyGrayscale(); break; // Grayscale
         case 14: applyMagesty(); break; // Magesty
         case 15: applyNostalgia(); break; // Nostalgia
-        case 16: applyOilPainting(); break; // Oil Painting
-        case 17: applyVignette(); break; // Vignette
-        case 18: applyPencilDrawing(); break; // Pencil Drawing
-        case 19: applyPixelate(); break; // Pixelate
-        case 20: applyEngraving(); break; // Engraving
-        case 21: applyGranulado(); break; // Granulado
+        case 16: applyGranulado(); break; // Granulado
+        case 17: applyOilPainting(); break; // Oil Painting
+        case 18: applyVignette(); break; // Vignette
+        case 19: applyPencilDrawing(); break; // Pencil Drawing
+        case 20: applyPixelate(); break; // Pixelate
+        case 21: applyEngraving(); break; // Engraving
     }
 }
 
@@ -177,7 +177,7 @@ function applyOilPainting() {
 }
 
 function applyVignette() {
-    glfxCanvas.draw(originalTexture).vignette(0.5, 0.8).update();
+    glfxCanvas.draw(originalTexture).vignette(0.5, 0.6).update();
     replaceCanvasWithGLFX();
 }
 
