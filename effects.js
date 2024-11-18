@@ -77,6 +77,8 @@ function applyGLFXEffect(index) {
         case 19: glfxCanvas.draw(originalTexture).hexagonalPixelate(320, 239.5, 10).update(); break;
         case 20: glfxCanvas.draw(originalTexture).dotScreen(320, 239.5, 1.1, 3).update(); break;
         case 21: glfxCanvas.draw(originalTexture).noise(0.5).update(); break;
+        case 22: glfxCanvas.draw(originalTexture).zoomBlur(500, 240, 0.3).update(); break;
+        case 23: glfxCanvas.draw(originalTexture).swirl(500, 240, 244, 4.2).update(); break;
     }
 
     // Copia o resultado do canvas WebGL de volta para o canvas original
