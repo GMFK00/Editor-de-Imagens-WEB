@@ -1,8 +1,11 @@
+var imgInstance;
 function readImage() {
     if (this.files && this.files[0]) {
         var file = new FileReader();
         file.onload = function(e) {
             imgOriginal.src = e.target.result;
+            actualImage.src = e.target.result;
+            loaded = true;
             draw();
         };
         file.readAsDataURL(this.files[0]);
@@ -18,14 +21,18 @@ async function draw() {
     ),
   );
   canvasFabric = new fabric.Canvas('canvasArea');
-  var imgInstance = new fabric.Image(imgOriginal, {
+  imgInstance = new fabric.Image(imgOriginal, {
   left: 0,
   top: 0,
   opacity: 1,
   innerWidth: imgOriginal.width,
-  innerHeight: imgOriginal.height
+  innerHeight: imgOriginal.height,
+  lockMovementX: true,
+  lockMovementY: true,
+  selectable: false
 });
   canvasFabric.add(imgInstance);
+  canvasFabric.isDragging = false;
   canvasFabric.setWidth(imgOriginal.width);
   canvasFabric.setHeight(imgOriginal.height);
   Array.from(document.getElementsByClassName("top-bar-icon")).forEach(enableElement);

@@ -3,12 +3,15 @@ const ctx = canvas.getContext("2d", {antialias: false});
 //const overlaycanvas = document.getElementById("overlay-canvas");
 //const ctx2 = overlaycanvas.getContext("2d", {antialias: false});
 var imgOriginal = document.getElementById("imgOriginal");
+var actualImage = document.getElementById("actualImage");
 var fileInput = document.getElementById("fileUp");
 const dpr = window.devicePixelRatio;
 var croping = false;
 var ratio;
 var historico = [];
 var rect;
+var canvasFabric = null;
+var loaded = false;
 
 document.getElementById("btnOpenFile").addEventListener('click', () => {
     fileInput.click();
